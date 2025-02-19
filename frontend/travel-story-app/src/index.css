@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdp-root {
+  --rdp-accent-color: #727D73; 
+  --rdp-accent-background-color: #D0DDD0; 
+  --rdp-day_button-border-radius: 8px;
+  --rdp-selected-font: bold medium var(--rdp-font-family);
+}
+
+@layer base {
+  html {
+    font-family: "Poppins", "sans-serif";
+  }
+
+  body {
+    background-color: #F0F0D7; 
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #727D73; 
+  border-radius: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #D0DDD0; 
+}
+
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-cyan-600/5 rounded px-5 py-3 mb-4 outline-none; 
+  }
+
+  .btn-primary {
+    @apply w-full text-sm font-medium text-white bg-[#727D73] shadow-lg shadow-[#AAB99A]/50 p-[10px] rounded-full my-1 hover:bg-[#AAB99A] hover:text-[#727D73];
+  }
+
+  .btn-light {
+    @apply bg-[#D0DDD0] text-[#727D73] shadow-[#AAB99A]/0 border border-[#AAB99A] hover:bg-[#727D73] hover:text-white; 
+  }
+
+  .login-ui-box {
+    @apply w-80 h-[450px] rounded-full bg-[#727D73] absolute rotate-45; 
+  }
+
+  .model-box {
+    @apply w-[80vw] md:w-[40%] h-[80vh] bg-white rounded-lg mx-auto mt-14 p-5 overflow-y-scroll scrollbar z-50;
+  }
+
+  .icon-btn {
+    @apply text-[22px] text-[#727D73] cursor-pointer hover:text-[#D0DDD0];
+  }
+
+  .input-label {
+    @apply text-xs text-[#727D73]; 
+  }
+
+  .btn-small {
+    @apply flex items-center gap-1 text-xs font-medium bg-[#D0DDD0] text-[#727D73] shadow-[#AAB99A]/0 border border-[#AAB99A] hover:bg-[#727D73] hover:text-white rounded px-3 py-[3px]; 
+  }
+
+  .btn-delete {
+    @apply bg-[#F0F0D7] text-[#727D73] shadow-[#AAB99A]/0 border border-[#AAB99A] hover:bg-[#D70654] hover:border-[#D70654] hover:text-white; 
+  }
+}
